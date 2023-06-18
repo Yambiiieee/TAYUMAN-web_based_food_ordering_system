@@ -54,7 +54,7 @@
                 <p>Price:₱{{ cart.price }}</p>
                 <p>
                   Total Payment: ₱<b>{{
-                    (Math.round(placeOrderData.value[j].payment * 100) / 100).toFixed(2)
+                    (Math.round(cart.order_quantity * cart.price * 100) / 100).toFixed(2)
                   }}</b>
                 </p>
                 <div class="d-flex justify-content-end">
