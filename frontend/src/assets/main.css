@@ -1,0 +1,137 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700&display=swap');
+
+:root {
+    --brand: #ff4d29;
+    --dark: #092032;
+    --body: #516171;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+
+    /* --color1: #DC2626; */
+    --color1: #af253f;
+
+    --color2: #F56818;
+    --color3: #C42424;
+    --color4: #F2F2F2;
+
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+i{
+  font-family: none;
+  margin-bottom: 1px;
+  margin-right: 2px;
+}
+
+body {
+    /* font-family: "Barlow", sans-serif; */
+    color: var(--body);
+    line-height: 1.7;
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-1,.display-2,.display-3,.display-4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+.main-color{
+  color:  var(--color1);
+}
+
+.color1 {
+  color: var(--color1);
+}
+
+.bg1 {
+  background-color: var(--color1)!important;  
+}
+
+.btn1 {
+  font-size: 18px;
+  background: var(--color1);
+  color: #fff;
+  padding: 7px  12px;
+}
+.btn1:hover {
+  font-size: 18px;
+  background: var(--color3);
+  color: #fff;
+}
+
+.bi-exclamation-circle-fill {
+  font-size: 110px;
+  width: fit-content;
+  margin-left: 35%;
+  padding: 10px;
+  margin-top: -15%;
+  margin-bottom: 5%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.f-create {
+  background-color: rgb(0, 165, 142);
+  color: #fefefe;
+}
+.f-create:hover {
+  background-color: rgb(0, 139, 120);
+  color: #fefefe;
+}
+::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);       /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(121, 121, 136);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 5px solid  rgb(255, 255, 255); 
+   /* creates padding around scroll thumb */
+}
+
+
+.table-container {
+  max-height: 300px !important;  /* Set the desired max height for the table */
+  overflow-y: auto !important; /* Add scroll when the table overflows */
+}
+
+/* Optional: Adjust the table styles as needed */
+.table {
+  /* Table styles */
+}
+
+.add-btn {
+  font-size: 18px;
+  background: var(--color1);
+  color: #fff;
+  width: 180px;
+  /* padding: 4px; */
+}
+.add-btn:hover {
+  font-size: 18px;
+  background: var(--color3);
+  color: #fff;
+}
+.modal-header {
+  background: var(--color1);
+  color: #fff !important;
+}
+.btn1 {
+  background: var(--color1);
+  color: #fff;
+}
+.btn1:hover {
+  background: var(--color3);
+  color: #fff;
+}
