@@ -44,7 +44,7 @@ export const useProductStore = defineStore('product', {
       return productService
         .addProduct(formData)
         .then((data) => {
-          this.products = [data.data.data.product, ...this.products]
+          this.store_products = [data.data.data.product, ...this.store_products]
           return Promise.resolve(data)
         })
         .catch((err) => {
@@ -94,8 +94,8 @@ export const useProductStore = defineStore('product', {
       return productService
         .updateProduct(id, formData)
         .then((data) => {
-          let index = this.products.findIndex((x) => x.product_id == data.product_id)
-          this.products[index] = data
+          let index = this.store_products.findIndex((x) => x.product_id == data.product_id)
+          this.store_products[index] = data
 
           return Promise.resolve(data)
         })
@@ -110,7 +110,7 @@ export const useProductStore = defineStore('product', {
       return productService
         .deleteProduct(payload.id)
         .then((data) => {
-          this.products = this.products.filter((x) => x.product_id !== payload.id)
+          this.store_products = this.store_products.filter((x) => x.product_id !== payload.id)
 
           return Promise.resolve(data)
         })

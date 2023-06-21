@@ -285,7 +285,7 @@ class OrderController extends Controller
             ->leftJoin('products as p', 'o.product', '=', 'p.id')
             ->leftJoin('users as st', 'p.product_by', '=', 'st.id')
             ->where('o.status', '=', "For Delivery")
-            ->where('o.rider', '=', "")
+            ->where('o.rider', '=', null)
             ->orderBy('o.created_at', 'desc')
             ->get();
 
@@ -719,7 +719,7 @@ class OrderController extends Controller
             ->where('id', '=', $id)
             ->get();
 
-        if ($order[0]->rider != 0) {
+        if ($order[0]->rider != null) {
             return $this->error('', 'Record not found', 400);
         }
 

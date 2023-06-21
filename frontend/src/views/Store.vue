@@ -960,7 +960,7 @@ const submit = () => {
             name: '',
             price: 0,
             quantity: 0,
-            type: 'Food',
+            type: 'Snacks',
             description: '',
             size: 'Small'
           }
