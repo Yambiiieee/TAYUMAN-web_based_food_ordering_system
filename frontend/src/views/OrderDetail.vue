@@ -189,7 +189,7 @@
           </div>
           <div
             class="mt-2 d-flex justify-content-end"
-            v-if="order.rider === 0 && order.status === 'For Delivery' && user.type === 'rider'"
+            v-if="order.rider === null && order.status === 'For Delivery' && user.type === 'rider'"
           >
             <button type="button" @click="acceptDelivery" class="btn btn1" v-if="!isLoading">
               Accept Delivery
