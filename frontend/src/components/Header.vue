@@ -72,7 +72,10 @@
               My Products
             </router-link>
           </li>
-          <li class="nav-item" v-if="user?.type != 'admin' && user?.type != 'store'">
+          <li
+            class="nav-item"
+            v-if="user?.type != 'admin' && user?.type != 'store' && user?.type == 'rider'"
+          >
             <router-link
               to="/products"
               :class="`${route.name == 'Products' ? 'nav-link active' : 'nav-link'}`"
