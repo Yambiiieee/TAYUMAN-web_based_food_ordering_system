@@ -74,7 +74,7 @@
           </li>
           <li
             class="nav-item"
-            v-if="user?.type != 'admin' && user?.type != 'store' && user?.type == 'rider'"
+            v-if="user?.type != 'admin' && user?.type != 'store' && user?.type !== 'rider'"
           >
             <router-link
               to="/products"
