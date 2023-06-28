@@ -331,7 +331,7 @@ a * :hover {
 .banner-img {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+
   padding: 5px;
   height: 250px;
 }
