@@ -19,7 +19,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center banner-img">
+        <div class="col-md-5 text-center banner-img">
           <img
             src="../assets/banner_img.png"
             alt="welcome back"
@@ -332,7 +332,8 @@ a * :hover {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  padding: 20px;
+  padding: 5px;
+  height: 250px;
 }
 .search-container {
   position: relative;
