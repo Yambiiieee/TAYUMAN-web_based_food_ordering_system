@@ -1,6 +1,6 @@
 <template>
   <div class="container py-lg-5 p-3">
-    <h2 class="color1">Riders</h2>
+    <h2 class="color1">Delivery Staffs</h2>
 
     <div class="mt-4 row">
       <div class="input-group search-container col-md-6">
@@ -17,7 +17,7 @@
       </div>
       <div class="col-md-6 d-flex justify-content-end mt-2">
         <button class="btn add-user-btn" data-bs-toggle="modal" data-bs-target="#addUserAccount">
-          <i class="bi bi-person-bounding-box"></i>Add Rider
+          <i class="bi bi-person-bounding-box"></i>Add Delivery Staff
         </button>
       </div>
     </div>

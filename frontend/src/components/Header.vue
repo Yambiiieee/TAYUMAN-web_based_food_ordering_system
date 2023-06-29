@@ -132,7 +132,7 @@
                 }`"
               >
                 <i class="bi bi-truck"></i>
-                Riders
+                Delivery Staff
               </router-link>
             </div>
           </li>

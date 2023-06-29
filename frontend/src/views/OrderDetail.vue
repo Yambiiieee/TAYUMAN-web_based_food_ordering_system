@@ -131,7 +131,7 @@
 
           <div class="row">
             <div class="col-4">
-              <p><b>Rider Name</b></p>
+              <p><b>Delivery Staff Name</b></p>
             </div>
             <div class="col-7">
               <p>{{ order.rider_first_name }}</p>
@@ -140,7 +140,7 @@
 
           <div class="row">
             <div class="col-4">
-              <p><b>Rider Contact</b></p>
+              <p><b>Delivery Staff Contact</b></p>
             </div>
             <div class="col-7">
               <p>{{ order.rider_contact_number }}</p>

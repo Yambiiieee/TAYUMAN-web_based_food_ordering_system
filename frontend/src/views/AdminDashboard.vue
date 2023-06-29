@@ -49,7 +49,7 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body bg-white shadow rounded">
-              <h4 class="color1">Total Rider</h4>
+              <h4 class="color1">Total Delivery Staff</h4>
               <p class="user-count">{{ riderCount }}</p>
             </div>
           </div>
