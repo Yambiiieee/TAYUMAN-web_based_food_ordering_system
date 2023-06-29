@@ -33,7 +33,7 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body bg-white shadow rounded">
-              <h4 class="color1">Total Users</h4>
+              <h5 class="color1">Total Users</h5>
               <p class="user-count">{{ userCount }}</p>
             </div>
           </div>
@@ -41,7 +41,7 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body bg-white shadow rounded">
-              <h4 class="color1">Total Merchant</h4>
+              <h5 class="color1">Total Merchant</h5>
               <p class="user-count">{{ storeCount }}</p>
             </div>
           </div>
@@ -49,7 +49,7 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body bg-white shadow rounded">
-              <h4 class="color1">Total Delivery Staff</h4>
+              <h5 class="color1">Total Delivery Staff</h5>
               <p class="user-count">{{ riderCount }}</p>
             </div>
           </div>
