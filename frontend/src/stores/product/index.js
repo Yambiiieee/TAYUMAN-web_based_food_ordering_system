@@ -219,6 +219,7 @@ export const useProductStore = defineStore('product', {
         .getOrder(payload.id)
         .then((data) => {
           this.order = data.order
+          this.refund_order = data.refund
           return Promise.resolve(data)
         })
         .catch((err) => {

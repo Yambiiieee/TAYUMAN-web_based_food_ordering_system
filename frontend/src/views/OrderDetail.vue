@@ -25,7 +25,7 @@
       </div>
       <div class="col-md-5 card py-4 px-4">
         <h3 class="color1">Order Details</h3>
-        <form @submit.prevent="updateStatus">
+        <form @submit.prevent="() => updateStatus">
           <div class="row">
             <div class="col-4">
               <p><b>Order ID:</b></p>
@@ -166,7 +166,7 @@
           </div>
           <div
             class="mt-2 d-flex justify-content-between"
-            v-if="user.id === order.user_id && order.status == 'Done'"
+            v-if="user.id === order.user_id && order.status == 'Done' && isAskRefund === false"
           >
             <button type="submit" class="btn btn1" data-bs-toggle="modal" data-bs-target="#refund">
               Ask for refund
@@ -435,6 +435,8 @@ const user = ref(computed(() => authStore.user))
 
 const orderStatus = ref('')
 
+const isAskRefund = ref(true)
+
 // const order = ref({
 //   quantity: cart.order_quantity,
 //   type: 'To pick up',
@@ -456,6 +458,7 @@ const getOrder = () => {
     .then((data) => {
       console.log(data.ratings.length)
       orderStatus.value = data.order.status
+      isAskRefund.value = data?.refund.length === 0 ? false : true
       if (data.ratings.length > 0) {
         isShowRating.value = false
       } else {
@@ -510,9 +513,6 @@ const completeDelivery = () => {
       console.log('Error', err)
     })
 }
-const redirect = (id) => {
-  router.push(`/product/detail/${id}`)
-}
 
 const submit = () => {
   /**Add validation here */
@@ -524,7 +524,7 @@ const submit = () => {
 
   // add regex for tup email
   if (!refund.value.reason) {
-    error.value.reason = 'Please enter image.'
+    error.value.reason = 'Please provide a reason for requesting a refund.'
     isValid = false
   }
 
@@ -540,7 +540,7 @@ const submit = () => {
             reason: '',
             status: 'Pending'
           }
-
+          isAskRefund.value = true
           $('#refund').modal('hide')
         } else {
           message.value = data.response.data.message

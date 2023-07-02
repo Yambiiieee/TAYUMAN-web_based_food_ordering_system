@@ -625,7 +625,13 @@ class OrderController extends Controller
             ->where('co.order', '=', $id)
             ->get();
 
-        return $this->success(["order" => $orders[0], "ratings" => $ratings], "", 200);
+        $refund = DB::table('refunds')
+
+            ->where('order', '=', $id)
+            ->get();
+
+
+        return $this->success(["order" => $orders[0], "ratings" => $ratings, "refund" => $refund], "", 200);
     }
 
     /**
